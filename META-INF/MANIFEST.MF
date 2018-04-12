@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: historyservice Binding
+Bundle-SymbolicName: org.openhab.binding.historyservice;singleton:=true
+Bundle-Vendor: openHAB
+Bundle-Version: 2.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ lib/gson-2.7.jar,
+ lib/org.eclipse.paho.client.mqttv3-1.1.0.jar
+Import-Package: 
+ org.eclipse.smarthome.config.core,
+ org.eclipse.smarthome.core.items,
+ org.eclipse.smarthome.core.library.types,
+ org.eclipse.smarthome.core.persistence,
+ org.eclipse.smarthome.core.thing,
+ org.eclipse.smarthome.core.thing.binding,
+ org.eclipse.smarthome.core.thing.binding.builder,
+ org.eclipse.smarthome.core.thing.type,
+ org.eclipse.smarthome.core.types,
+ org.openhab.binding.historyservice,
+ org.openhab.binding.historyservice.handler,
+ org.eclipse.jdt.annotation;resolution:=optional,
+ org.slf4j
+Service-Component: OSGI-INF/*.xml
+Export-Package: org.openhab.binding.historyservice,
+ org.openhab.binding.historyservice.handler

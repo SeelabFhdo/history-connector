@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="historyservice"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- Sample Thing Type -->
+    <thing-type id="HistoryService">
+        <label>historyservice Binding Thing</label>
+        <description>Sample thing for historyservice Binding</description>
+
+        <channels>
+            <channel id="channel1" typeId="sample-channel"/>
+        </channels>
+        
+             <!-- Parameters -->
+        <config-description>
+            <parameter name="brokerurl" type="text">
+                <label>BrokerURL</label>
+                <description>BrockerURL</description>
+                <default>localhost</default>
+                <required>true</required>
+            </parameter>
+            
+            <parameter name="instance" type="text">
+                <label>Openhab2Instance</label>
+                <description>Openhab2 Instance Name</description>
+                <default>Openhab</default>
+                <required>true</required>
+            </parameter>
+            
+            <parameter name="certpath" type="text">
+                <label>JKSCertPah</label>
+                <description>Path to JKS Cert</description>
+                <default>Openhab</default>
+                <required>true</required>
+            </parameter>
+            
+            <parameter name="certpassword" type="text">
+                <label>JKSCertPassword</label>
+                <description>Password for JKS Cert</description>
+                <default>password</default>
+                <required>true</required>
+            </parameter>
+            
+            <parameter name="username" type="text">
+                <label>HiveMQ-Username</label>
+                <description>Username for HiveMQ</description>
+                <default>Openhab</default>
+                <required>true</required>
+            </parameter>
+            
+            <parameter name="password" type="text">
+                <label>HiveMQ-Password</label>
+                <description>Password for HiveMQ</description>
+                <default>password</default>
+                <required>true</required>
+            </parameter>       
+    
+        </config-description>
+        
+    </thing-type>
+
+    <!-- Sample Channel Type -->
+    <channel-type id="sample-channel">
+        <item-type>historyserviceItem</item-type>
+        <label>historyservice Binding Channel</label>
+        <description>Sample channel for historyservice Binding</description>
+    </channel-type>
+
+</thing:thing-descriptions>

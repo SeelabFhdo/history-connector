@@ -1,0 +1,13 @@
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" activate="activate" deactivate="deactivate" name="org.openhab.binding.historyservice.internal.HistoryService">
+
+
+   <implementation class="org.openhab.binding.historyservice.internal.HistoryService"/>
+   
+   <service>
+      <provide interface="org.eclipse.smarthome.core.persistence.PersistenceService"/>
+      
+   </service>
+   
+    <reference bind="setItemRegistry" cardinality="0..1" interface="org.eclipse.smarthome.core.items.ItemRegistry" name="ItemRegistry" policy="dynamic" unbind="unsetItemRegistry"/>
+
+</scr:component>
